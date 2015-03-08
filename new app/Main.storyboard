@@ -215,7 +215,7 @@
         <!--View Controller-->
         <scene sceneID="fEi-lw-Op9">
             <objects>
-                <viewController id="8aR-oA-pT1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tensai" id="8aR-oA-pT1" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tb0-kD-GFY"/>
                         <viewControllerLayoutGuide type="bottom" id="nvj-Rz-wFV"/>
@@ -277,7 +277,7 @@
         <!--View Controller-->
         <scene sceneID="0qR-eN-WJT">
             <objects>
-                <viewController id="reC-oN-bry" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="gureru" id="reC-oN-bry" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3DC-vc-RqO"/>
                         <viewControllerLayoutGuide type="bottom" id="h9t-uG-EVt"/>
@@ -301,7 +301,7 @@
         <!--View Controller-->
         <scene sceneID="E4J-iY-Ugv">
             <objects>
-                <viewController storyboardIdentifier="next" useStoryboardIdentifierAsRestorationIdentifier="YES" id="an0-It-dtg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="byouki" useStoryboardIdentifierAsRestorationIdentifier="YES" id="an0-It-dtg" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZId-QD-Mlw"/>
                         <viewControllerLayoutGuide type="bottom" id="PoE-qb-1Q5"/>
@@ -327,6 +327,7 @@
         <!--View Controller-->
         <scene sceneID="ubx-JE-fYU">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yoB-PD-Mov" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="j85-H8-ZoP" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yKj-rV-SOC"/>
@@ -356,7 +357,6 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yoB-PD-Mov" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="31" y="414"/>
         </scene>

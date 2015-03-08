@@ -53,13 +53,15 @@ class ViewController: UIViewController {
         yearLabel.text = "\(year)"
         ope = ope + 1
             }
-        //ボタンを６回以上おす且つ
-        else if (){
-            
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("next")
+        //ボタンを６回以上おす且つ信頼が-20以下
+        else if(shinrai <= 20){
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-            
         }
+        
+        //
+        //else if(syusai >= 20){
+            
         
     }
     
