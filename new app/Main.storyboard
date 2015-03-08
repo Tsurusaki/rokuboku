@@ -210,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="410" y="409"/>
+            <point key="canvasLocation" x="412" y="414"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fEi-lw-Op9">
@@ -223,13 +223,37 @@
                     <view key="view" contentMode="scaleToFill" id="Lac-eF-668">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="できすぎ.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="48p-0W-yhy">
+                                <rect key="frame" x="52" y="139" width="226" height="421"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJF-eo-geh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="863" y="566"/>
+            <point key="canvasLocation" x="915" y="772"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="YPF-b3-Ot9">
+            <objects>
+                <viewController id="YRG-zF-1cT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LfC-MZ-OcB"/>
+                        <viewControllerLayoutGuide type="bottom" id="5fQ-IF-VCt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qTN-3E-RlI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KTN-Nz-Arr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1373" y="488"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5Nm-qh-RrS">
@@ -248,7 +272,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wie-bi-TNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1351" y="570"/>
+            <point key="canvasLocation" x="1581" y="-20"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0qR-eN-WJT">
@@ -261,18 +285,23 @@
                     <view key="view" contentMode="scaleToFill" id="myq-Ji-SiX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sp12.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ovd-8C-1ER">
+                                <rect key="frame" x="0.0" y="0.0" width="336" height="568"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbL-Jw-s9u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1285" y="-92"/>
+            <point key="canvasLocation" x="1173" y="-66"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="E4J-iY-Ugv">
             <objects>
-                <viewController id="an0-It-dtg" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="next" useStoryboardIdentifierAsRestorationIdentifier="YES" id="an0-It-dtg" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZId-QD-Mlw"/>
                         <viewControllerLayoutGuide type="bottom" id="PoE-qb-1Q5"/>
@@ -280,13 +309,20 @@
                     <view key="view" contentMode="scaleToFill" id="8XI-LD-H6B">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="病気.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Brx-nZ-YfV">
+                                <rect key="frame" x="11" y="208" width="299" height="326"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="病気１.png" translatesAutoresizingMaskIntoConstraints="NO" id="zMO-db-OuA">
+                                <rect key="frame" x="16" y="40" width="267" height="179"/>
+                            </imageView>
+                        </subviews>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vnn-Mh-qMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="851" y="-86"/>
+            <point key="canvasLocation" x="784" y="-132"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ubx-JE-fYU">
@@ -338,5 +374,9 @@
         <image name="btn057_10.png" width="180" height="30"/>
         <image name="l_03.gif" width="640" height="480"/>
         <image name="room_kodomobeya.png" width="587" height="587"/>
+        <image name="sp12.jpg" width="350" height="350"/>
+        <image name="できすぎ.jpg" width="71" height="170"/>
+        <image name="病気.jpg" width="725" height="732"/>
+        <image name="病気１.png" width="400" height="300"/>
     </resources>
 </document>
