@@ -224,8 +224,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="できすぎ.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="48p-0W-yhy">
-                                <rect key="frame" x="52" y="139" width="226" height="421"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new-app-イラストできすぎ.png" translatesAutoresizingMaskIntoConstraints="NO" id="ch5-Nt-HYf">
+                                <rect key="frame" x="0.0" y="-8" width="320" height="576"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -247,6 +247,11 @@
                     <view key="view" contentMode="scaleToFill" id="qTN-3E-RlI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="niceguy" image="new-app-イラストいけめん.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cxf-h8-Dr5">
+                                <rect key="frame" x="0.0" y="-8" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -266,6 +271,11 @@
                     <view key="view" contentMode="scaleToFill" id="KvW-V0-NIQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="sports" image="new-app-イラストスポーツ.png" translatesAutoresizingMaskIntoConstraints="NO" id="2PD-ZU-scW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -286,8 +296,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sp12.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ovd-8C-1ER">
-                                <rect key="frame" x="0.0" y="0.0" width="336" height="568"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new-app-イラストぐれる.png" translatesAutoresizingMaskIntoConstraints="NO" id="CCX-dx-6cX">
+                                <rect key="frame" x="0.0" y="-8" width="320" height="568"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -310,11 +320,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="病気.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Brx-nZ-YfV">
-                                <rect key="frame" x="11" y="208" width="299" height="326"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="病気１.png" translatesAutoresizingMaskIntoConstraints="NO" id="zMO-db-OuA">
-                                <rect key="frame" x="16" y="40" width="267" height="179"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new-app-イラスト病気.png" translatesAutoresizingMaskIntoConstraints="NO" id="n69-Ap-sJ5">
+                                <rect key="frame" x="0.0" y="-5" width="320" height="608"/>
                             </imageView>
                         </subviews>
                     </view>
@@ -327,7 +334,6 @@
         <!--View Controller-->
         <scene sceneID="ubx-JE-fYU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yoB-PD-Mov" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="j85-H8-ZoP" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yKj-rV-SOC"/>
@@ -357,6 +363,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yoB-PD-Mov" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="31" y="414"/>
         </scene>
@@ -373,10 +380,11 @@
         <image name="btn057_09.png" width="180" height="30"/>
         <image name="btn057_10.png" width="180" height="30"/>
         <image name="l_03.gif" width="640" height="480"/>
+        <image name="new-app-イラストいけめん.png" width="640" height="1136"/>
+        <image name="new-app-イラストぐれる.png" width="640" height="1136"/>
+        <image name="new-app-イラストできすぎ.png" width="640" height="1136"/>
+        <image name="new-app-イラストスポーツ.png" width="640" height="1136"/>
+        <image name="new-app-イラスト病気.png" width="640" height="1136"/>
         <image name="room_kodomobeya.png" width="587" height="587"/>
-        <image name="sp12.jpg" width="350" height="350"/>
-        <image name="できすぎ.jpg" width="71" height="170"/>
-        <image name="病気.jpg" width="725" height="732"/>
-        <image name="病気１.png" width="400" height="300"/>
     </resources>
 </document>

@@ -19,13 +19,11 @@
 		B83A91EB1AAAC55900119D6F /* btn057_09.png in Resources */ = {isa = PBXBuildFile; fileRef = B83A91E11AAAC55900119D6F /* btn057_09.png */; };
 		B83A91EC1AAAC55900119D6F /* btn057_10.png in Resources */ = {isa = PBXBuildFile; fileRef = B83A91E21AAAC55900119D6F /* btn057_10.png */; };
 		B85E15971AAC17AC00BAAD3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B85E15961AAC17AC00BAAD3C /* Main.storyboard */; };
-		B85E159A1AAC1D0900BAAD3C /* 病気.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B85E15981AAC1D0900BAAD3C /* 病気.jpg */; };
-		B85E159B1AAC1D0900BAAD3C /* 病気１.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B85E15991AAC1D0900BAAD3C /* 病気１.jpg */; };
-		B85E159D1AAC1F6600BAAD3C /* 病気１のコピー.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B85E159C1AAC1F6600BAAD3C /* 病気１のコピー.jpg */; };
-		B85E15A21AAC214000BAAD3C /* できすぎ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B85E15A01AAC214000BAAD3C /* できすぎ.jpg */; };
-		B85E15A31AAC214000BAAD3C /* てんさい.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B85E15A11AAC214000BAAD3C /* てんさい.jpg */; };
-		B85E15A51AAC220300BAAD3C /* sp12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B85E15A41AAC220300BAAD3C /* sp12.jpg */; };
-		B85E15A71AAC241300BAAD3C /* 病気１.png in Resources */ = {isa = PBXBuildFile; fileRef = B85E15A61AAC241300BAAD3C /* 病気１.png */; };
+		B870E5061AB064A6001B8345 /* new-app-イラストいけめん.png in Resources */ = {isa = PBXBuildFile; fileRef = B870E5011AB064A6001B8345 /* new-app-イラストいけめん.png */; };
+		B870E5071AB064A6001B8345 /* new-app-イラストぐれる.png in Resources */ = {isa = PBXBuildFile; fileRef = B870E5021AB064A6001B8345 /* new-app-イラストぐれる.png */; };
+		B870E5081AB064A6001B8345 /* new-app-イラストスポーツ.png in Resources */ = {isa = PBXBuildFile; fileRef = B870E5031AB064A6001B8345 /* new-app-イラストスポーツ.png */; };
+		B870E5091AB064A6001B8345 /* new-app-イラストできすぎ.png in Resources */ = {isa = PBXBuildFile; fileRef = B870E5041AB064A6001B8345 /* new-app-イラストできすぎ.png */; };
+		B870E50A1AB064A6001B8345 /* new-app-イラスト病気.png in Resources */ = {isa = PBXBuildFile; fileRef = B870E5051AB064A6001B8345 /* new-app-イラスト病気.png */; };
 		B8D620171AAA910D0034E457 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D620161AAA910D0034E457 /* AppDelegate.swift */; };
 		B8D6201A1AAA910D0034E457 /* new_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8D620181AAA910D0034E457 /* new_app.xcdatamodeld */; };
 		B8D6201C1AAA910D0034E457 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6201B1AAA910D0034E457 /* ViewController.swift */; };
@@ -59,13 +57,11 @@
 		B83A91E11AAAC55900119D6F /* btn057_09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn057_09.png; sourceTree = "<group>"; };
 		B83A91E21AAAC55900119D6F /* btn057_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn057_10.png; sourceTree = "<group>"; };
 		B85E15961AAC17AC00BAAD3C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		B85E15981AAC1D0900BAAD3C /* 病気.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "病気.jpg"; sourceTree = "<group>"; };
-		B85E15991AAC1D0900BAAD3C /* 病気１.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "病気１.jpg"; sourceTree = "<group>"; };
-		B85E159C1AAC1F6600BAAD3C /* 病気１のコピー.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "病気１のコピー.jpg"; sourceTree = "<group>"; };
-		B85E15A01AAC214000BAAD3C /* できすぎ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "できすぎ.jpg"; sourceTree = "<group>"; };
-		B85E15A11AAC214000BAAD3C /* てんさい.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "てんさい.jpg"; sourceTree = "<group>"; };
-		B85E15A41AAC220300BAAD3C /* sp12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sp12.jpg; sourceTree = "<group>"; };
-		B85E15A61AAC241300BAAD3C /* 病気１.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "病気１.png"; sourceTree = "<group>"; };
+		B870E5011AB064A6001B8345 /* new-app-イラストいけめん.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-app-イラストいけめん.png"; sourceTree = "<group>"; };
+		B870E5021AB064A6001B8345 /* new-app-イラストぐれる.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-app-イラストぐれる.png"; sourceTree = "<group>"; };
+		B870E5031AB064A6001B8345 /* new-app-イラストスポーツ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-app-イラストスポーツ.png"; sourceTree = "<group>"; };
+		B870E5041AB064A6001B8345 /* new-app-イラストできすぎ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-app-イラストできすぎ.png"; sourceTree = "<group>"; };
+		B870E5051AB064A6001B8345 /* new-app-イラスト病気.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-app-イラスト病気.png"; sourceTree = "<group>"; };
 		B8D620111AAA910D0034E457 /* new app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "new app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8D620151AAA910D0034E457 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B8D620161AAA910D0034E457 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,13 +132,11 @@
 		B8D620131AAA910D0034E457 /* new app */ = {
 			isa = PBXGroup;
 			children = (
-				B85E15A61AAC241300BAAD3C /* 病気１.png */,
-				B85E15A41AAC220300BAAD3C /* sp12.jpg */,
-				B85E15A01AAC214000BAAD3C /* できすぎ.jpg */,
-				B85E15A11AAC214000BAAD3C /* てんさい.jpg */,
-				B85E159C1AAC1F6600BAAD3C /* 病気１のコピー.jpg */,
-				B85E15981AAC1D0900BAAD3C /* 病気.jpg */,
-				B85E15991AAC1D0900BAAD3C /* 病気１.jpg */,
+				B870E5011AB064A6001B8345 /* new-app-イラストいけめん.png */,
+				B870E5021AB064A6001B8345 /* new-app-イラストぐれる.png */,
+				B870E5031AB064A6001B8345 /* new-app-イラストスポーツ.png */,
+				B870E5041AB064A6001B8345 /* new-app-イラストできすぎ.png */,
+				B870E5051AB064A6001B8345 /* new-app-イラスト病気.png */,
 				B83A91D81AAAC55800119D6F /* btn057 */,
 				B83A91D61AAAC46800119D6F /* 165810_01.jpg */,
 				B8D6203F1AAA9ABD0034E457 /* l_03.gif */,
@@ -264,28 +258,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				B83A91E31AAAC55900119D6F /* btn057_01.png in Resources */,
-				B85E15A31AAC214000BAAD3C /* てんさい.jpg in Resources */,
+				B870E5071AB064A6001B8345 /* new-app-イラストぐれる.png in Resources */,
 				B83A91E81AAAC55900119D6F /* btn057_06.png in Resources */,
 				B83A91EA1AAAC55900119D6F /* btn057_08.png in Resources */,
-				B85E159B1AAC1D0900BAAD3C /* 病気１.jpg in Resources */,
 				B83A91D71AAAC46800119D6F /* 165810_01.jpg in Resources */,
 				B83A91E51AAAC55900119D6F /* btn057_03.png in Resources */,
 				B83A91E91AAAC55900119D6F /* btn057_07.png in Resources */,
 				B8D6203E1AAA9A290034E457 /* room_kodomobeya.png in Resources */,
-				B85E15A21AAC214000BAAD3C /* できすぎ.jpg in Resources */,
+				B870E5061AB064A6001B8345 /* new-app-イラストいけめん.png in Resources */,
 				B83A91EB1AAAC55900119D6F /* btn057_09.png in Resources */,
 				B83A91E41AAAC55900119D6F /* btn057_02.png in Resources */,
 				B8D620241AAA910D0034E457 /* LaunchScreen.xib in Resources */,
-				B85E15A51AAC220300BAAD3C /* sp12.jpg in Resources */,
-				B85E159D1AAC1F6600BAAD3C /* 病気１のコピー.jpg in Resources */,
 				B83A91EC1AAAC55900119D6F /* btn057_10.png in Resources */,
 				B85E15971AAC17AC00BAAD3C /* Main.storyboard in Resources */,
 				B83A91E71AAAC55900119D6F /* btn057_05.png in Resources */,
+				B870E50A1AB064A6001B8345 /* new-app-イラスト病気.png in Resources */,
+				B870E5091AB064A6001B8345 /* new-app-イラストできすぎ.png in Resources */,
 				B83A91E61AAAC55900119D6F /* btn057_04.png in Resources */,
 				B8D620401AAA9ABD0034E457 /* l_03.gif in Resources */,
-				B85E15A71AAC241300BAAD3C /* 病気１.png in Resources */,
 				B8D620211AAA910D0034E457 /* Images.xcassets in Resources */,
-				B85E159A1AAC1D0900BAAD3C /* 病気.jpg in Resources */,
+				B870E5081AB064A6001B8345 /* new-app-イラストスポーツ.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
