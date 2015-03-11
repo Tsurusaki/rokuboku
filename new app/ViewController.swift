@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     }
     @IBAction func stady(){
         //ボタンを押すのが６回以下ならこのアクションをします
-        if(ope <= 6){
+        if ope <= 6 {
             
         shinrai = shinrai + 3
         shinraiLabel.text = "\(shinrai)"
@@ -53,19 +53,42 @@ class ViewController: UIViewController {
         yearLabel.text = "\(year)"
         ope = ope + 1
             }
-        //ボタンを６回以上おす且つ信頼が-20以下
-        else if(shinrai <= 20){
+        //ボタンを６回以上おす且つ信頼が-20以下（グレる）
+        else if shinrai <= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
         
-        //
-        //else if(syusai >= 20){
-            
+        //秀才が20以上（天才）
+        else if syusai >= 20 {
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
+            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        }
+        
+        //体力が15以上、スポーツ15以上、信頼10以上
+        else if power >= 15 & sports >= 15 & shinrai >= 15 {
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
+            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        }
+        
+        //体力が20以上、スポーツ20以上（オリンピック選手）
+        else if power >= 20 & sports > 20 & shinrai >= 20 {
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
+            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        }
+        
+        //体力が-20以下
+        else if power <= -20 {
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
+            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        }
+
+        
         
     }
     
     @IBAction func book(){
+        if ope <= 6 {
         shinrai = shinrai + 2
         shinraiLabel.text = "\(shinrai)"
         power = power - 2
@@ -74,7 +97,11 @@ class ViewController: UIViewController {
         syusaiLabel.text = "\(syusai)"
         year = year + 2
         yearLabel.text = "\(year)"
+        ope = ope + 1
+            }
     }
+        
+        
     
     @IBAction func soccer(){
         sports = sports + 5
