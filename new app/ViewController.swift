@@ -71,17 +71,24 @@ class ViewController: UIViewController {
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
             }
         
-        //体力が20以上、スポーツ20以上（オリンピック選手）
+        //体力が20以上、スポーツ20以上（スポーツ選手）
         else if power >= 20 & sports >= 20 & shinrai < 10 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
             }
         
-        //体力が-20以下
+        //体力が-20以下（病気）
         else if power <= -20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
             }
+        //それ以外（自分探し放浪）
+        else {
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("hourou")
+            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        }
+
+        
 
         }
     
@@ -128,6 +135,12 @@ class ViewController: UIViewController {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
+            //それ以外（自分探し放浪）
+        else {
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("hourou")
+            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        }
+
     }
         
         
@@ -156,23 +169,29 @@ class ViewController: UIViewController {
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
-            //体力が15以上、スポーツ15以上、信頼10以上(イケメン)
-        else if power >= 15 & sports >= 15 & shinrai >= 10 {
+            //スポーツ15以上、秀才０以下(イケメン)
+        else if syusai <= 0, sports >= 15 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //体力が20以上、スポーツ20以上（オリンピック選手）
-        else if power >= 20 & sports >= 20 & shinrai < 10 {
+        else if sports >= 20, power >= 20  {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //体力が-20以下
-        else if power <= -20 {
+        else if power < -20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
+            //それ以外（自分探し放浪）
+        else {
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("hourou")
+            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        }
+
     }
     
     @IBAction func food(){
@@ -212,6 +231,12 @@ class ViewController: UIViewController {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
+            //それ以外（自分探し放浪）
+        else {
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("hourou")
+            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        }
+
     }
     
     @IBAction func help(){
@@ -253,6 +278,12 @@ class ViewController: UIViewController {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
+            //それ以外（自分探し放浪）
+        else {
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("hourou")
+            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        }
+
     }
     
     @IBAction func fight(){
@@ -294,6 +325,12 @@ class ViewController: UIViewController {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
+            //それ以外（自分探し放浪）
+        else {
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("hourou")
+            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        }
+
     }
     
     @IBAction func kataduke(){
@@ -335,6 +372,12 @@ class ViewController: UIViewController {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
+            //それ以外（自分探し放浪）
+        else {
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("hourou")
+            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        }
+
     }
     
     @IBAction func game(){
@@ -378,6 +421,12 @@ class ViewController: UIViewController {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
+            //それ以外（自分探し放浪）
+        else {
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("hourou")
+            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        }
+
     }
     
     @IBAction func brake(){
@@ -419,6 +468,12 @@ class ViewController: UIViewController {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
+        //それ以外（自分探し放浪）
+        else {
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("hourou")
+            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        }
+
        // self.cal()
     }
     
