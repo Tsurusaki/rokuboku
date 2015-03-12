@@ -213,6 +213,30 @@
             <point key="canvasLocation" x="412" y="414"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="fUQ-O1-hWf">
+            <objects>
+                <viewController storyboardIdentifier="tabi" id="lRp-Hc-6Wh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hPe-I3-Lxe"/>
+                        <viewControllerLayoutGuide type="bottom" id="H0y-oA-AFY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RP2-fq-qsy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="旅.png" translatesAutoresizingMaskIntoConstraints="NO" id="9cm-yC-pf7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cHi-L1-Y15" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717" y="752"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="fEi-lw-Op9">
             <objects>
                 <viewController storyboardIdentifier="tensai" id="8aR-oA-pT1" sceneMemberID="viewController">
@@ -332,6 +356,40 @@
             <point key="canvasLocation" x="784" y="-132"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="k7Y-rK-HvF">
+            <objects>
+                <viewController id="zJ2-KW-9J7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C3A-sC-mux"/>
+                        <viewControllerLayoutGuide type="bottom" id="aia-cW-Wmr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="emK-lB-imS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="ゲームのせつめい　　　　　　　" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VDj-bn-2Pp">
+                                <rect key="frame" x="23" y="28" width="274" height="53"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X9T-bF-ud0">
+                                <rect key="frame" x="40" y="96" width="240" height="395"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">このゲームは、６歳の少年が１８歳の大人になるまで成長するストーリーをつくるものです。少年が大人になったら、ゲームは終了です。　　　どんな行動をするかによって、どんな大人になるかがかわってきます。　　　　　　　　　　　　　　　1.なにかのアクションをするごと　　　　に、年齢が２歳あがっていきます。　　　　　　　　　　　　　　2.どの行動をとるかによって、どの値がどのくらい上がるかはわかりません。　　　　　　　　　　　　　どんな大人になるかはきみしだい。　　　　　　　　　　　　　　</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89636715590000005" green="1" blue="0.98271407649999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="63R-cE-ayx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="205" y="-214"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="ubx-JE-fYU">
             <objects>
                 <viewController id="j85-H8-ZoP" sceneMemberID="viewController">
@@ -347,15 +405,27 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn057_01.png" translatesAutoresizingMaskIntoConstraints="NO" id="ho1-t0-uDA">
-                                <rect key="frame" x="34" y="46" width="240" height="74"/>
+                                <rect key="frame" x="40" y="20" width="240" height="52"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKl-dV-Df4">
-                                <rect key="frame" x="40" y="53" width="234" height="59"/>
+                                <rect key="frame" x="40" y="20" width="234" height="59"/>
                                 <state key="normal" title="はじめる">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="N95-1C-55U"/>
+                                    <segue destination="zJ2-KW-9J7" kind="modal" id="SWt-Nu-jfQ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn057_03.png" translatesAutoresizingMaskIntoConstraints="NO" id="tou-y8-Ipv">
+                                <rect key="frame" x="40" y="80" width="240" height="55"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLu-6w-ZBZ">
+                                <rect key="frame" x="40" y="80" width="240" height="55"/>
+                                <state key="normal" title="せつめい">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" id="1rR-Vq-PdH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -365,7 +435,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yoB-PD-Mov" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31" y="414"/>
+            <point key="canvasLocation" x="-233" y="-88"/>
         </scene>
     </scenes>
     <resources>
@@ -386,5 +456,6 @@
         <image name="new-app-イラストスポーツ.png" width="640" height="1136"/>
         <image name="new-app-イラスト病気.png" width="640" height="1136"/>
         <image name="room_kodomobeya.png" width="587" height="587"/>
+        <image name="旅.png" width="640" height="1136"/>
     </resources>
 </document>

@@ -53,38 +53,38 @@ class ViewController: UIViewController {
         yearLabel.text = "\(year)"
         ope = ope + 1
             }
-        //ボタンを６回以上おす且つ信頼が-20以下（グレる）
-        else if shinrai <= 20 {
+        //ボタンを６回より大きく且つ信頼が-20以下（グレる）
+        else if ope > 6 && shinrai <= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
         
         //秀才が20以上（天才）
-        else if syusai >= 20 {
+        else if ope > 6 && syusai >= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
         
         //体力が15以上、スポーツ15以上、信頼10以上(イケメン)
-        else if power >= 15 & sports >= 15 & shinrai >= 10 {
+        else if ope > 6 && power >= 15 && sports >= 15 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
             }
         
-        //体力が20以上、スポーツ20以上（スポーツ選手）
-        else if power >= 20 & sports >= 20 & shinrai < 10 {
+        //体力が20以上、スポーツ20以上 信頼９以下（スポーツ選手）
+        else if ope > 6 && power >= 20 && sports >= 20 && shinrai <= 9 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
             }
         
         //体力が-20以下（病気）
-        else if power <= -20 {
+        else if ope > 6 && power <= -20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
             }
         //それ以外（自分探し放浪）
         else {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("hourou")
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
 
@@ -106,38 +106,38 @@ class ViewController: UIViewController {
         yearLabel.text = "\(year)"
         ope = ope + 1
             }
-            //ボタンを６回以上おす且つ信頼が-20以下（グレる）
-        else if shinrai <= 20 {
+            //ボタンを６回より押す且つ信頼が-20以下（グレる）
+        else if ope > 6 && shinrai <= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //秀才が20以上（天才）
-        else if syusai >= 20 {
+        else if ope > 6 && syusai >= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //体力が15以上、スポーツ15以上、信頼10以上(イケメン)
-        else if power >= 15 & sports >= 15 & shinrai >= 10 {
+        else if ope > 6 && power >= 15 && sports >= 15 && shinrai >= 10 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
-            //体力が20以上、スポーツ20以上（オリンピック選手）
-        else if power >= 20 & sports >= 20 & shinrai < 10 {
+            //体力が20以上、スポーツ20以上且つ信頼が９以下（オリンピック選手）
+        else if ope > 6 && power >= 20 && shinrai<=9 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //体力が-20以下
-        else if power <= -20 {
+        else if ope > 6 && power <= -20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             //それ以外（自分探し放浪）
         else {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("hourou")
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
 
@@ -157,41 +157,41 @@ class ViewController: UIViewController {
         ope = ope + 1
         }
         
-            //ボタンを６回以上おす且つ信頼が-20以下（グレる）
-        else if shinrai <= 20 {
+            //ボタンを６回より押す且つ信頼が-20以下（グレる）
+        else if ope > 6 && shinrai <= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //秀才が20以上（天才）
-        else if syusai >= 20 {
+        else if ope > 6 && syusai >= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
-            //スポーツ15以上、秀才０以下(イケメン)
-        else if syusai <= 0, sports >= 15 {
+            //体力が15以上、スポーツ15以上、信頼10以上(イケメン)
+        else if ope > 6 && power >= 15 && sports >= 15 && shinrai >= 10 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
-            //体力が20以上、スポーツ20以上（オリンピック選手）
-        else if sports >= 20, power >= 20  {
+            //体力が20以上、スポーツ20以上且つ信頼が９以下（オリンピック選手）
+        else if ope > 6 && power >= 20 && shinrai<=9 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //体力が-20以下
-        else if power < -20 {
+        else if ope > 6 && power <= -20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             //それ以外（自分探し放浪）
         else {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("hourou")
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
-
+        
     }
     
     @IBAction func food(){
@@ -202,38 +202,38 @@ class ViewController: UIViewController {
         yearLabel.text = "\(year)"
         ope = ope + 1
             }
-            //ボタンを６回以上おす且つ信頼が-20以下（グレる）
-        else if shinrai <= 20 {
+            //ボタンを６回より押す且つ信頼が-20以下（グレる）
+        else if ope > 6 && shinrai <= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //秀才が20以上（天才）
-        else if syusai >= 20 {
+        else if ope > 6 && syusai >= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //体力が15以上、スポーツ15以上、信頼10以上(イケメン)
-        else if power >= 15 & sports >= 15 & shinrai >= 10 {
+        else if ope > 6 && power >= 15 && sports >= 15 && shinrai >= 10 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
-            //体力が20以上、スポーツ20以上（オリンピック選手）
-        else if power >= 20 & sports >= 20 & shinrai < 10 {
+            //体力が20以上、スポーツ20以上且つ信頼が９以下（オリンピック選手）
+        else if ope > 6 && power >= 20 && shinrai<=9 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //体力が-20以下
-        else if power <= -20 {
+        else if ope > 6 && power <= -20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             //それ以外（自分探し放浪）
         else {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("hourou")
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
 
@@ -249,38 +249,38 @@ class ViewController: UIViewController {
         yearLabel.text = "\(year)"
         ope = ope + 1
         }
-            //ボタンを６回以上おす且つ信頼が-20以下（グレる）
-        else if shinrai <= 20 {
+            //ボタンを６回より押す且つ信頼が-20以下（グレる）
+        else if ope > 6 && shinrai <= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //秀才が20以上（天才）
-        else if syusai >= 20 {
+        else if ope > 6 && syusai >= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //体力が15以上、スポーツ15以上、信頼10以上(イケメン)
-        else if power >= 15 & sports >= 15 & shinrai >= 10 {
+        else if ope > 6 && power >= 15 && sports >= 15 && shinrai >= 10 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
-            //体力が20以上、スポーツ20以上（オリンピック選手）
-        else if power >= 20 & sports >= 20 & shinrai < 10 {
+            //体力が20以上、スポーツ20以上且つ信頼が９以下（オリンピック選手）
+        else if ope > 6 && power >= 20 && shinrai<=9 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //体力が-20以下
-        else if power <= -20 {
+        else if ope > 6 && power <= -20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             //それ以外（自分探し放浪）
         else {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("hourou")
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
 
@@ -296,38 +296,38 @@ class ViewController: UIViewController {
         yearLabel.text = "\(year)"
         ope = ope + 1
             }
-            //ボタンを６回以上おす且つ信頼が-20以下（グレる）
-        else if shinrai <= 20 {
+            //ボタンを６回より押す且つ信頼が-20以下（グレる）
+        else if ope > 6 && shinrai <= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //秀才が20以上（天才）
-        else if syusai >= 20 {
+        else if ope > 6 && syusai >= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //体力が15以上、スポーツ15以上、信頼10以上(イケメン)
-        else if power >= 15 & sports >= 15 & shinrai >= 10 {
+        else if ope > 6 && power >= 15 && sports >= 15 && shinrai >= 10 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
-            //体力が20以上、スポーツ20以上（オリンピック選手）
-        else if power >= 20 & sports >= 20 & shinrai < 10 {
+            //体力が20以上、スポーツ20以上且つ信頼が９以下（オリンピック選手）
+        else if ope > 6 && power >= 20 && shinrai<=9 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //体力が-20以下
-        else if power <= -20 {
+        else if ope > 6 && power <= -20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             //それ以外（自分探し放浪）
         else {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("hourou")
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
 
@@ -343,38 +343,38 @@ class ViewController: UIViewController {
         yearLabel.text = "\(year)"
         ope = ope + 1
         }
-            //ボタンを６回以上おす且つ信頼が-20以下（グレる）
-        else if shinrai <= 20 {
+            //ボタンを６回より押す且つ信頼が-20以下（グレる）
+        else if ope > 6 && shinrai <= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //秀才が20以上（天才）
-        else if syusai >= 20 {
+        else if ope > 6 && syusai >= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //体力が15以上、スポーツ15以上、信頼10以上(イケメン)
-        else if power >= 15 & sports >= 15 & shinrai >= 10 {
+        else if ope > 6 && power >= 15 && sports >= 15 && shinrai >= 10 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
-            //体力が20以上、スポーツ20以上（オリンピック選手）
-        else if power >= 20 & sports >= 20 & shinrai < 10 {
+            //体力が20以上、スポーツ20以上且つ信頼が９以下（オリンピック選手）
+        else if ope > 6 && power >= 20 && shinrai<=9 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //体力が-20以下
-        else if power <= -20 {
+        else if ope > 6 && power <= -20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             //それ以外（自分探し放浪）
         else {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("hourou")
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
 
@@ -392,38 +392,38 @@ class ViewController: UIViewController {
         yearLabel.text = "\(year)"
         ope = ope + 1
             }
-            //ボタンを６回以上おす且つ信頼が-20以下（グレる）
-        else if shinrai <= 20 {
+            //ボタンを６回より押す且つ信頼が-20以下（グレる）
+        else if ope > 6 && shinrai <= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //秀才が20以上（天才）
-        else if syusai >= 20 {
+        else if ope > 6 && syusai >= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //体力が15以上、スポーツ15以上、信頼10以上(イケメン)
-        else if power >= 15 & sports >= 15 & shinrai >= 10 {
+        else if ope > 6 && power >= 15 && sports >= 15 && shinrai >= 10 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
-            //体力が20以上、スポーツ20以上（オリンピック選手）
-        else if power >= 20 & sports >= 20 & shinrai < 10 {
+            //体力が20以上、スポーツ20以上且つ信頼が９以下（オリンピック選手）
+        else if ope > 6 && power >= 20 && shinrai<=9 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //体力が-20以下
-        else if power <= -20 {
+        else if ope > 6 && power <= -20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             //それ以外（自分探し放浪）
         else {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("hourou")
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
 
@@ -439,41 +439,40 @@ class ViewController: UIViewController {
         yearLabel.text = "\(year)"
         ope = ope + 1
         }
-            //ボタンを６回以上おす且つ信頼が-20以下（グレる）
-        else if shinrai <= 20 {
+            //ボタンを６回より押す且つ信頼が-20以下（グレる）
+        else if ope > 6 && shinrai <= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //秀才が20以上（天才）
-        else if syusai >= 20 {
+        else if ope > 6 && syusai >= 20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //体力が15以上、スポーツ15以上、信頼10以上(イケメン)
-        else if power >= 15 & sports >= 15 & shinrai >= 10 {
+        else if ope > 6 && power >= 15 && sports >= 15 && shinrai >= 10 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
-            //体力が20以上、スポーツ20以上（オリンピック選手）
-        else if power >= 20 & sports >= 20 & shinrai < 10 {
+            //体力が20以上、スポーツ20以上且つ信頼が９以下（オリンピック選手）
+        else if ope > 6 && power >= 20 && shinrai<=9 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
             
             //体力が-20以下
-        else if power <= -20 {
+        else if ope > 6 && power <= -20 {
             var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
-        //それ以外（自分探し放浪）
+            //それ以外（自分探し放浪）
         else {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("hourou")
+            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
             self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
-
        // self.cal()
     }
     
