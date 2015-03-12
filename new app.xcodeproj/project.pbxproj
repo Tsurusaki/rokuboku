@@ -33,6 +33,17 @@
 		B8D620301AAA910D0034E457 /* new_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6202F1AAA910D0034E457 /* new_appTests.swift */; };
 		B8D6203E1AAA9A290034E457 /* room_kodomobeya.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D6203D1AAA9A290034E457 /* room_kodomobeya.png */; };
 		B8D620401AAA9ABD0034E457 /* l_03.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8D6203F1AAA9ABD0034E457 /* l_03.gif */; };
+		B8F0DE7D1AB15BEE00C31F29 /* ViewController in Resources */ = {isa = PBXBuildFile; fileRef = B8F0DE7C1AB15BEE00C31F29 /* ViewController */; };
+		B8F0DE7F1AB15BFA00C31F29 /* ViewController in Resources */ = {isa = PBXBuildFile; fileRef = B8F0DE7E1AB15BFA00C31F29 /* ViewController */; };
+		B8F0DE811AB164B400C31F29 /* 勉強 (#1).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8F0DE801AB164B400C31F29 /* 勉強 (#1).mp3 */; };
+		B8F0DE831AB1651F00C31F29 /* 本.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8F0DE821AB1651F00C31F29 /* 本.mp3 */; };
+		B8F0DE851AB1656E00C31F29 /* サッカー.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8F0DE841AB1656E00C31F29 /* サッカー.mp3 */; };
+		B8F0DE871AB168D800C31F29 /* お菓子.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8F0DE861AB168D800C31F29 /* お菓子.mp3 */; };
+		B8F0DE891AB1691A00C31F29 /* お手伝い.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8F0DE881AB1691A00C31F29 /* お手伝い.mp3 */; };
+		B8F0DE8B1AB1694000C31F29 /* 喧嘩.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8F0DE8A1AB1694000C31F29 /* 喧嘩.mp3 */; };
+		B8F0DE8D1AB1696500C31F29 /* 片付け.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8F0DE8C1AB1696500C31F29 /* 片付け.mp3 */; };
+		B8F0DE8F1AB1698900C31F29 /* ゲーム.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8F0DE8E1AB1698900C31F29 /* ゲーム.mp3 */; };
+		B8F0DE911AB169AA00C31F29 /* ごろごろ.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8F0DE901AB169AA00C31F29 /* ごろごろ.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +87,17 @@
 		B8D6202F1AAA910D0034E457 /* new_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = new_appTests.swift; sourceTree = "<group>"; };
 		B8D6203D1AAA9A290034E457 /* room_kodomobeya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = room_kodomobeya.png; sourceTree = "<group>"; };
 		B8D6203F1AAA9ABD0034E457 /* l_03.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = l_03.gif; sourceTree = "<group>"; };
+		B8F0DE7C1AB15BEE00C31F29 /* ViewController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ViewController; sourceTree = "<group>"; };
+		B8F0DE7E1AB15BFA00C31F29 /* ViewController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ViewController; sourceTree = "<group>"; };
+		B8F0DE801AB164B400C31F29 /* 勉強 (#1).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "勉強 (#1).mp3"; sourceTree = "<group>"; };
+		B8F0DE821AB1651F00C31F29 /* 本.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "本.mp3"; sourceTree = "<group>"; };
+		B8F0DE841AB1656E00C31F29 /* サッカー.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "サッカー.mp3"; sourceTree = "<group>"; };
+		B8F0DE861AB168D800C31F29 /* お菓子.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "お菓子.mp3"; sourceTree = "<group>"; };
+		B8F0DE881AB1691A00C31F29 /* お手伝い.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "お手伝い.mp3"; sourceTree = "<group>"; };
+		B8F0DE8A1AB1694000C31F29 /* 喧嘩.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "喧嘩.mp3"; sourceTree = "<group>"; };
+		B8F0DE8C1AB1696500C31F29 /* 片付け.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "片付け.mp3"; sourceTree = "<group>"; };
+		B8F0DE8E1AB1698900C31F29 /* ゲーム.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ゲーム.mp3"; sourceTree = "<group>"; };
+		B8F0DE901AB169AA00C31F29 /* ごろごろ.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "ごろごろ.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +156,15 @@
 		B8D620131AAA910D0034E457 /* new app */ = {
 			isa = PBXGroup;
 			children = (
+				B8F0DE901AB169AA00C31F29 /* ごろごろ.mp3 */,
+				B8F0DE8E1AB1698900C31F29 /* ゲーム.mp3 */,
+				B8F0DE8C1AB1696500C31F29 /* 片付け.mp3 */,
+				B8F0DE8A1AB1694000C31F29 /* 喧嘩.mp3 */,
+				B8F0DE881AB1691A00C31F29 /* お手伝い.mp3 */,
+				B8F0DE861AB168D800C31F29 /* お菓子.mp3 */,
+				B8F0DE841AB1656E00C31F29 /* サッカー.mp3 */,
+				B8F0DE821AB1651F00C31F29 /* 本.mp3 */,
+				B8F0DE801AB164B400C31F29 /* 勉強 (#1).mp3 */,
 				B8B1500F1AB123D00051C0B3 /* 旅.png */,
 				B870E5011AB064A6001B8345 /* new-app-イラストいけめん.png */,
 				B870E5021AB064A6001B8345 /* new-app-イラストぐれる.png */,
@@ -146,6 +177,8 @@
 				B8D6203D1AAA9A290034E457 /* room_kodomobeya.png */,
 				B8D620161AAA910D0034E457 /* AppDelegate.swift */,
 				B8D6201B1AAA910D0034E457 /* ViewController.swift */,
+				B8F0DE7E1AB15BFA00C31F29 /* ViewController */,
+				B8F0DE7C1AB15BEE00C31F29 /* ViewController */,
 				B85E15961AAC17AC00BAAD3C /* Main.storyboard */,
 				B8D620201AAA910D0034E457 /* Images.xcassets */,
 				B8D620221AAA910D0034E457 /* LaunchScreen.xib */,
@@ -265,23 +298,34 @@
 				B83A91E81AAAC55900119D6F /* btn057_06.png in Resources */,
 				B83A91EA1AAAC55900119D6F /* btn057_08.png in Resources */,
 				B83A91D71AAAC46800119D6F /* 165810_01.jpg in Resources */,
+				B8F0DE891AB1691A00C31F29 /* お手伝い.mp3 in Resources */,
 				B83A91E51AAAC55900119D6F /* btn057_03.png in Resources */,
+				B8F0DE871AB168D800C31F29 /* お菓子.mp3 in Resources */,
 				B83A91E91AAAC55900119D6F /* btn057_07.png in Resources */,
 				B8D6203E1AAA9A290034E457 /* room_kodomobeya.png in Resources */,
 				B870E5061AB064A6001B8345 /* new-app-イラストいけめん.png in Resources */,
 				B83A91EB1AAAC55900119D6F /* btn057_09.png in Resources */,
+				B8F0DE8F1AB1698900C31F29 /* ゲーム.mp3 in Resources */,
 				B83A91E41AAAC55900119D6F /* btn057_02.png in Resources */,
+				B8F0DE911AB169AA00C31F29 /* ごろごろ.mp3 in Resources */,
 				B8B150101AB123D00051C0B3 /* 旅.png in Resources */,
 				B8D620241AAA910D0034E457 /* LaunchScreen.xib in Resources */,
+				B8F0DE831AB1651F00C31F29 /* 本.mp3 in Resources */,
 				B83A91EC1AAAC55900119D6F /* btn057_10.png in Resources */,
 				B85E15971AAC17AC00BAAD3C /* Main.storyboard in Resources */,
+				B8F0DE7F1AB15BFA00C31F29 /* ViewController in Resources */,
 				B83A91E71AAAC55900119D6F /* btn057_05.png in Resources */,
+				B8F0DE8B1AB1694000C31F29 /* 喧嘩.mp3 in Resources */,
 				B870E50A1AB064A6001B8345 /* new-app-イラスト病気.png in Resources */,
+				B8F0DE811AB164B400C31F29 /* 勉強 (#1).mp3 in Resources */,
+				B8F0DE851AB1656E00C31F29 /* サッカー.mp3 in Resources */,
 				B870E5091AB064A6001B8345 /* new-app-イラストできすぎ.png in Resources */,
 				B83A91E61AAAC55900119D6F /* btn057_04.png in Resources */,
 				B8D620401AAA9ABD0034E457 /* l_03.gif in Resources */,
+				B8F0DE7D1AB15BEE00C31F29 /* ViewController in Resources */,
 				B8D620211AAA910D0034E457 /* Images.xcassets in Resources */,
 				B870E5081AB064A6001B8345 /* new-app-イラストスポーツ.png in Resources */,
+				B8F0DE8D1AB1696500C31F29 /* 片付け.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
