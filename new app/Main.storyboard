@@ -225,7 +225,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="旅.png" translatesAutoresizingMaskIntoConstraints="NO" id="9cm-yC-pf7">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="-16" width="320" height="590"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNI-yz-Ft6">
+                                <rect key="frame" x="223" y="462" width="97" height="49"/>
+                                <state key="normal" title="もういちど">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="j85-H8-ZoP" kind="modal" id="xfp-5l-6Bk"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn057_02.png" translatesAutoresizingMaskIntoConstraints="NO" id="BNz-st-2Gm">
+                                <rect key="frame" x="223" y="462" width="89" height="44"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -234,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHi-L1-Y15" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1717" y="752"/>
+            <point key="canvasLocation" x="11" y="762"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fEi-lw-Op9">
@@ -251,6 +263,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new-app-イラストできすぎ.png" translatesAutoresizingMaskIntoConstraints="NO" id="ch5-Nt-HYf">
                                 <rect key="frame" x="0.0" y="-8" width="320" height="576"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn057_02.png" translatesAutoresizingMaskIntoConstraints="NO" id="5c7-cd-qQf">
+                                <rect key="frame" x="213" y="514" width="85" height="46"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wW2-Ca-V3c">
+                                <rect key="frame" x="213" y="512" width="81" height="49"/>
+                                <state key="normal" title="もういちど">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="j85-H8-ZoP" kind="modal" id="4ow-8T-P5s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -258,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wJF-eo-geh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="915" y="772"/>
+            <point key="canvasLocation" x="803" y="570"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="YPF-b3-Ot9">
@@ -275,14 +299,29 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="niceguy" image="new-app-イラストいけめん.png" translatesAutoresizingMaskIntoConstraints="NO" id="Cxf-h8-Dr5">
                                 <rect key="frame" x="0.0" y="-8" width="320" height="568"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvI-LB-mkj">
+                                <rect key="frame" x="180" y="499" width="116" height="49"/>
+                                <state key="normal" title="もういちど">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="j85-H8-ZoP" kind="modal" id="ujV-rG-1eH"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn057_02.png" translatesAutoresizingMaskIntoConstraints="NO" id="oZU-oW-YlR">
+                                <rect key="frame" x="180" y="502" width="116" height="46"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="view" destination="fvI-LB-mkj" id="wVr-Ap-sxV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KTN-Nz-Arr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1373" y="488"/>
+            <point key="canvasLocation" x="-685" y="-64"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5Nm-qh-RrS">
@@ -299,6 +338,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="sports" image="new-app-イラストスポーツ.png" translatesAutoresizingMaskIntoConstraints="NO" id="2PD-ZU-scW">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn057_02.png" translatesAutoresizingMaskIntoConstraints="NO" id="DGA-cb-vrk">
+                                <rect key="frame" x="21" y="504" width="107" height="38"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2o-VP-Su8">
+                                <rect key="frame" x="21" y="498" width="107" height="49"/>
+                                <state key="normal" title="もういちど">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="j85-H8-ZoP" kind="modal" id="aQ9-00-xeV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -306,7 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wie-bi-TNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1581" y="-20"/>
+            <point key="canvasLocation" x="-847" y="729"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="0qR-eN-WJT">
@@ -323,6 +374,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new-app-イラストぐれる.png" translatesAutoresizingMaskIntoConstraints="NO" id="CCX-dx-6cX">
                                 <rect key="frame" x="0.0" y="-8" width="320" height="568"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn057_03.png" translatesAutoresizingMaskIntoConstraints="NO" id="XPr-uJ-YY5">
+                                <rect key="frame" x="211" y="501" width="87" height="37"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mq-rm-7cQ">
+                                <rect key="frame" x="217" y="499" width="81" height="49"/>
+                                <state key="normal" title="もういちど">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="j85-H8-ZoP" kind="modal" id="oam-jd-x3g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -330,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jbL-Jw-s9u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1173" y="-66"/>
+            <point key="canvasLocation" x="-487" y="762"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="E4J-iY-Ugv">
@@ -347,6 +410,24 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new-app-イラスト病気.png" translatesAutoresizingMaskIntoConstraints="NO" id="n69-Ap-sJ5">
                                 <rect key="frame" x="0.0" y="-5" width="320" height="608"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KfA-KZ-fLg">
+                                <rect key="frame" x="219" y="371" width="81" height="49"/>
+                                <state key="normal" title="もういちど">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn057_02.png" translatesAutoresizingMaskIntoConstraints="NO" id="u9o-wt-hxW">
+                                <rect key="frame" x="214" y="371" width="90" height="39"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ll2-SC-CXs">
+                                <rect key="frame" x="214" y="366" width="81" height="49"/>
+                                <state key="normal" title="もういちど">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="j85-H8-ZoP" kind="modal" id="5zi-ga-kPr"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -413,7 +494,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="165810_01.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ieM-8e-cLV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="main" image="165810_01.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ieM-8e-cLV">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn057_01.png" translatesAutoresizingMaskIntoConstraints="NO" id="ho1-t0-uDA">
@@ -470,4 +551,7 @@
         <image name="room_kodomobeya.png" width="587" height="587"/>
         <image name="旅.png" width="640" height="1136"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="xfp-5l-6Bk"/>
+    </inferredMetricsTieBreakers>
 </document>

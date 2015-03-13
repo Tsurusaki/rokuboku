@@ -517,6 +517,13 @@ class ViewController: UIViewController {
        // self.cal()
     }
     
+    
+   @IBAction func modorubt (){
+        var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("main")
+        self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+
+    }
+    
 //    func cal {
 //        if (year >= 18 & shinrai <= -20 &){
 //            
