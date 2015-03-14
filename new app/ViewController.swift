@@ -7,9 +7,10 @@
 //
 import UIKit
 import AVFoundation
-import UIKit
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController,AVAudioPlayerDelegate {
+    
     var ope = 1
     @IBOutlet var shinraiLabel:UILabel!
     var shinrai:Int = 10
@@ -30,7 +31,7 @@ class ViewController: UIViewController {
     @IBOutlet var yearLabel:UILabel!
     var year:Int = 6
     
-    
+    var audioPlayer: AVAudioPlayer!
     
     
     override func viewDidLoad() {
@@ -42,10 +43,33 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func book(){
+        if ope <= 6 {
+            syusai = syusai + 10
+            syusaiLabel.text = "\(syusai)"
+            sports = sports - 10
+            sportsLabel.text = "\(sports)"
+            year = year + 2
+            yearLabel.text = "\(year)"
+            ope = ope + 1
+            //効果音をつける
+            let sound_data = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("本", ofType: "mp3")!)
+            
+            audioPlayer = AVAudioPlayer(contentsOfURL:sound_data, error: nil)
+            audioPlayer.delegate = self
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+        }
+        if ope > 6{
+            result()
+        }
+    }
+    
     @IBAction func stady(){
         //ボタンを押すのが６回以下ならこのアクションをします
         if ope <= 6 {
-            
+        
         shinrai = shinrai + 10
         shinraiLabel.text = "\(shinrai)"
         power = power - 5
@@ -58,111 +82,18 @@ class ViewController: UIViewController {
        
         //効果音をつける
         let sound_data = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("勉強", ofType: "mp3")!)
-            var audioPlayer: AVAudioPlayer = AVAudioPlayer(contentsOfURL: sound_data, error: nil)
+            
+            audioPlayer = AVAudioPlayer(contentsOfURL:sound_data, error: nil)
+            audioPlayer.delegate = self 
+            audioPlayer.prepareToPlay()
             audioPlayer.play()
             }
-            /*体力が30以上、スポーツ30以上、信頼30以上,
-            秀才３０以上(イケメン)*/
-        else if ope > 6 && power >= 29 && sports >= 29 && shinrai >= 29 && shinrai >= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            //体力が30以上、スポーツ60以上（オリンピック選手）
-        else if ope > 6 && power >= 30  {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            //秀才が60以上（天才）
-        else if ope > 6 && syusai >= 60 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            
-            
-            //ボタンを６回より押す且つ信頼が-30以下（グレる）
-        else if ope > 6 && shinrai <= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            
-            //体力が-50以下
-        else if ope > 6 && power <= -20 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            //それ以外（自分探し放浪）
-        else {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        if ope > 6{
+            result()
         }
         
 
-        
-
         }
-    
-    
-    
-    @IBAction func book(){
-        if ope <= 6 {
-        syusai = syusai + 10
-        syusaiLabel.text = "\(syusai)"
-        sports = sports - 10
-        sportsLabel.text = "\(sports)"
-        year = year + 2
-        yearLabel.text = "\(year)"
-        ope = ope + 1
-            //効果音をつける
-            let sound_data = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("本", ofType: "mp3")!)
-            var audioPlayer: AVAudioPlayer = AVAudioPlayer(contentsOfURL: sound_data, error: nil)
-            audioPlayer.play()
-            }
-            /*体力が30以上、スポーツ30以上、信頼30以上,
-            秀才３０以上(イケメン)*/
-        else if ope > 6 && power >= 30 && sports >= 30 && shinrai >= 30 && shinrai >= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            //体力が30以上、スポーツ60以（オリンピック選手）
-        else if ope > 6 && power >= 30  {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            //秀才が60以上（天才）
-        else if ope > 6 && syusai >= 60 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            
-            
-            //ボタンを６回より押す且つ信頼が-30以下（グレる）
-        else if ope > 6 && shinrai <= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            
-            //体力が-50以下
-        else if ope > 6 && power <= -20 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            //それ以外（自分探し放浪）
-        else {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-
-    }
-        
-        
     
     @IBAction func soccer(){
         if ope <= 6 {
@@ -176,50 +107,16 @@ class ViewController: UIViewController {
         ope = ope + 1
             //効果音をつける
             let sound_data = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("サッカー", ofType: "mp3")!)
-            var audioPlayer: AVAudioPlayer = AVAudioPlayer(contentsOfURL: sound_data, error: nil)
+            
+            audioPlayer = AVAudioPlayer(contentsOfURL:sound_data, error: nil)
+            audioPlayer.delegate = self
+            audioPlayer.prepareToPlay()
             audioPlayer.play()
         }
-        
-            /*体力が30以上、スポーツ30以上、信頼30以上,
-            秀才３０以上(イケメン)*/
-        else if ope > 6 && power >= 30 && sports >= 30 && shinrai >= 30 && shinrai >= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        if ope > 6{
+            result()
         }
-            
-            //体力が30以上、スポーツ60以上且つ（オリンピック選手）
-        else if ope > 6 && power >= 30  {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            //秀才が60以上（天才）
-        else if ope > 6 && syusai >= 60 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            
-            
-            //ボタンを６回より押す且つ信頼が-30以下（グレる）
-        else if ope > 6 && shinrai <= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            
-            //体力が-50以下
-        else if ope > 6 && power <= -20 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            //それ以外（自分探し放浪）
-        else {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-
-    }
+            }
     
     @IBAction func food(){
         if ope <= 6 {
@@ -230,48 +127,15 @@ class ViewController: UIViewController {
         ope = ope + 1
             //効果音をつける
             let sound_data = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("お菓子", ofType: "mp3")!)
-            var audioPlayer: AVAudioPlayer = AVAudioPlayer(contentsOfURL: sound_data, error: nil)
+            
+            audioPlayer = AVAudioPlayer(contentsOfURL:sound_data, error: nil)
+            audioPlayer.delegate = self
+            audioPlayer.prepareToPlay()
             audioPlayer.play()
-            }
-            /*体力が30以上、スポーツ30以上、信頼30以上,
-            秀才３０以上(イケメン)*/
-        else if ope > 6 && power >= 30 && sports >= 30 && shinrai >= 30 && shinrai >= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
-            
-            //体力が30以上、スポーツ60以上（オリンピック選手）
-        else if ope > 6 && power >= 30  {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        if ope > 6{
+            result()
         }
-            
-            //秀才が60以上（天才）
-        else if ope > 6 && syusai >= 60 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            
-            
-            //ボタンを６回より押す且つ信頼が-30以下（グレる）
-        else if ope > 6 && shinrai <= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            
-            //体力が-50以下
-        else if ope > 6 && power <= -20 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            //それ以外（自分探し放浪）
-        else {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-
     }
     
     @IBAction func help(){
@@ -283,48 +147,15 @@ class ViewController: UIViewController {
         ope = ope + 1
             //効果音をつける
             let sound_data = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("お手伝い", ofType: "mp3")!)
-            var audioPlayer: AVAudioPlayer = AVAudioPlayer(contentsOfURL: sound_data, error: nil)
+            
+            audioPlayer = AVAudioPlayer(contentsOfURL:sound_data, error: nil)
+            audioPlayer.delegate = self
+            audioPlayer.prepareToPlay()
             audioPlayer.play()
         }
-            /*体力が30以上、スポーツ30以上、信頼30以上,
-            秀才３０以上(イケメン)*/
-        else if ope > 6 && power >= 30 && sports >= 30 && shinrai >= 30 && shinrai >= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        if ope > 6{
+            result()
         }
-            
-            //体力が30以上、スポーツ60以上（オリンピック選手）
-        else if ope > 6 && power >= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            //秀才が60以上（天才）
-        else if ope > 6 && syusai >= 60 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            
-            
-            //ボタンを６回より押す且つ信頼が-30以下（グレる）
-        else if ope > 6 && shinrai <= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            
-            //体力が-50以下
-        else if ope > 6 && power <= -20 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            //それ以外（自分探し放浪）
-        else {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-
     }
     
     @IBAction func fight(){
@@ -338,49 +169,17 @@ class ViewController: UIViewController {
         ope = ope + 1
             //効果音をつける
             let sound_data = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("喧嘩", ofType: "mp3")!)
-            var audioPlayer: AVAudioPlayer = AVAudioPlayer(contentsOfURL: sound_data, error: nil)
+            
+            audioPlayer = AVAudioPlayer(contentsOfURL:sound_data, error: nil)
+            audioPlayer.delegate = self
+            audioPlayer.prepareToPlay()
             audioPlayer.play()
-            }
-            /*体力が30以上、スポーツ30以上、信頼30以上,
-            秀才３０以上(イケメン)*/
-        else if ope > 6 && power >= 30 && sports >= 30 && shinrai >= 30 && shinrai >= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
-            
-            //体力が30以上、スポーツ60以上（オリンピック選手）
-        else if ope > 6 && power >= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            //秀才が60以上（天才）
-        else if ope > 6 && syusai >= 60 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            
-            
-            //ボタンを６回より押す且つ信頼が-30以下（グレる）
-        else if ope > 6 && shinrai <= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            
-            //体力が-50以下
-        else if ope > 6 && power <= -20 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            //それ以外（自分探し放浪）
-        else {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        if ope > 6{
+            result()
         }
 
-    }
+                }
     
     @IBAction func kataduke(){
         if ope <= 6 {
@@ -393,48 +192,15 @@ class ViewController: UIViewController {
         ope = ope + 1
             //効果音をつける
             let sound_data = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("片付け", ofType: "mp3")!)
-            var audioPlayer: AVAudioPlayer = AVAudioPlayer(contentsOfURL: sound_data, error: nil)
+            
+            audioPlayer = AVAudioPlayer(contentsOfURL:sound_data, error: nil)
+            audioPlayer.delegate = self
+            audioPlayer.prepareToPlay()
             audioPlayer.play()
         }
-            /*体力が30以上、スポーツ30以上、信頼30以上,
-            秀才３０以上(イケメン)*/
-        else if ope > 6 && power >= 30 && sports >= 30 && shinrai >= 30 && shinrai >= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        if ope > 6{
+            result()
         }
-            
-            //体力が30以上、スポーツ60以上（オリンピック選手）
-        else if ope > 6 && power >= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            //秀才が60以上（天才）
-        else if ope > 6 && syusai >= 60 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            
-            
-            //ボタンを６回より押す且つ信頼が-30以下（グレる）
-        else if ope > 6 && shinrai <= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            
-            //体力が-50以下
-        else if ope > 6 && power <= -20 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            //それ以外（自分探し放浪）
-        else {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-
     }
     
     @IBAction func game(){
@@ -448,50 +214,17 @@ class ViewController: UIViewController {
         ope = ope + 1
             //効果音をつける
             let sound_data = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("ゲーム", ofType: "mp3")!)
-            var audioPlayer: AVAudioPlayer = AVAudioPlayer(contentsOfURL: sound_data, error: nil)
+            
+            audioPlayer = AVAudioPlayer(contentsOfURL:sound_data, error: nil)
+            audioPlayer.delegate = self
+            audioPlayer.prepareToPlay()
             audioPlayer.play()
-            }
-            
-            /*体力が30以上、スポーツ30以上、信頼30以上,
-            秀才３０以上(イケメン)*/
-        else if ope > 6 && power >= 30 && sports >= 30 && shinrai >= 30 && shinrai >= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
         }
-            
-            //体力が30以上、スポーツ60以上（オリンピック選手）
-        else if ope > 6 && power >= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        if ope > 6{
+            result()
         }
-            
-            //秀才が60以上（天才）
-        else if ope > 6 && syusai >= 60 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            
-            
-            //ボタンを６回より押す且つ信頼が-30以下（グレる）
-        else if ope > 6 && shinrai <= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            
-            //体力が-50以下
-        else if ope > 6 && power <= -20 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            //それ以外（自分探し放浪）
-        else {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-
-
+        
+        
     }
     
     @IBAction func brake(){
@@ -503,62 +236,85 @@ class ViewController: UIViewController {
         ope = ope + 1
             //効果音をつける
             let sound_data = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("ごろごろ", ofType: "mp3")!)
-            var audioPlayer: AVAudioPlayer = AVAudioPlayer(contentsOfURL: sound_data, error: nil)
+            
+            audioPlayer = AVAudioPlayer(contentsOfURL:sound_data, error: nil)
+            audioPlayer.delegate = self
+            audioPlayer.prepareToPlay()
             audioPlayer.play()
         }
-            
-            
-            /*体力が30以上、スポーツ30以上、信頼30以上,
-            秀才３０以上(イケメン)*/
-        else if ope > 6 && power >= 30 && sports >= 30 && shinrai >= 30 && shinrai >= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+        if ope > 6{
+            result()
         }
-            
-            //体力が30以上、スポーツ60以上（オリンピック選手）
-        else if ope > 6 && power >= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            //秀才が60以上（天才）
-        else if ope > 6 && syusai >= 60 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-
-
-            //ボタンを６回より押す且つ信頼が-30以下（グレる）
-        else if ope > 6 && shinrai <= 30 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            
-            
-            //体力が-50以下
-        else if ope > 6 && power <= -20 {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-            //それ以外（自分探し放浪）
-        else {
-            var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
-            self.presentViewController(nex as UIViewController, animated: true, completion: nil)
-        }
-       // self.cal()
     }
     
     
-   @IBAction func modorubt (){
+   @IBAction func modorubt(){
         var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("main")
         self.presentViewController(nex as UIViewController, animated: true, completion: nil)
 
     }
     
+   @IBAction func result(){
+    
+    
+    /*体力が30以上、スポーツ30以上、信頼30以上,
+    秀才３０以上(イケメン)*/
+    if ope > 6 && power >= 30 && sports >= 30 && shinrai >= 30 && shinrai >= 30 {
+        audioPlayer.stop()
+        
+        var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("niceGuy")
+        self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+    }
+        
+        //体力が30以上、スポーツ60以上（オリンピック選手）
+    else if ope > 6 && power >= 30 {
+        audioPlayer.stop()
+        
+        var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("sportsman")
+        self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+    }
+        
+        //秀才が60以上（天才）
+    else if ope > 6 && syusai >= 60 {
+        audioPlayer.stop()
+        
+        var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tensai")
+        self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+    }
+        
+        
+        
+        //ボタンを６回より押す且つ信頼が-30以下（グレる）
+    else if ope > 6 && shinrai <= 30 {
+        audioPlayer.stop()
+        
+        var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("gureru")
+        self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+    }
+        
+        
+        //体力が-50以下
+    else if ope > 6 && power <= -20 {
+        audioPlayer.stop()
+        
+        var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("byouki")
+        self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+    }
+        //それ以外（自分探し放浪）
+    else {
+        audioPlayer.stop()
+        
+        var nex : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("tabi")
+        self.presentViewController(nex as UIViewController, animated: true, completion: nil)
+    }
+
+    
+    
+    }
+    
 //    func cal {
 //        if (year >= 18 & shinrai <= -20 &){
-//            
+//
 //        }
     
         
