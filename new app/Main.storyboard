@@ -16,6 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAZ-7d-3az">
+                                <rect key="frame" x="137" y="213" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="room_kodomobeya.png" translatesAutoresizingMaskIntoConstraints="NO" id="rw8-XV-6iM">
                                 <rect key="frame" x="10" y="40" width="301" height="252"/>
                             </imageView>
@@ -47,7 +53,7 @@
                                 <rect key="frame" x="118" y="312" width="86" height="53"/>
                             </imageView>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r8J-ug-Nuc">
-                                <rect key="frame" x="16" y="306" width="86" height="58"/>
+                                <rect key="frame" x="16" y="308" width="86" height="58"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="本を読む">
@@ -80,7 +86,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJM-2C-pgz">
-                                <rect key="frame" x="227" y="307" width="93" height="58"/>
+                                <rect key="frame" x="221" y="309" width="93" height="58"/>
                                 <state key="normal" title="サッカー">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -89,7 +95,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6x-xt-lhv">
-                                <rect key="frame" x="124" y="307" width="74" height="58"/>
+                                <rect key="frame" x="124" y="310" width="74" height="58"/>
                                 <state key="normal" title="勉強する">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -98,7 +104,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLv-vg-Hal">
-                                <rect key="frame" x="232" y="380" width="79" height="40"/>
+                                <rect key="frame" x="228" y="381" width="79" height="40"/>
                                 <state key="normal" title="喧嘩する">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -113,13 +119,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="信頼" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMU-pI-bI9">
-                                <rect key="frame" x="15" y="0.0" width="34" height="21"/>
+                                <rect key="frame" x="23" y="20" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZH-ar-HlJ">
-                                <rect key="frame" x="65" y="0.0" width="63" height="21"/>
+                                <rect key="frame" x="71" y="18" width="63" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -149,19 +155,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="体力" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYn-kg-SqK">
-                                <rect key="frame" x="184" y="0.0" width="34" height="21"/>
+                                <rect key="frame" x="184" y="22" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fB2-CV-7JU">
-                                <rect key="frame" x="241" y="0.0" width="43" height="21"/>
+                                <rect key="frame" x="241" y="21" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o95-fm-b2p">
-                                <rect key="frame" x="19" y="445" width="81" height="40"/>
+                                <rect key="frame" x="19" y="452" width="81" height="40"/>
                                 <state key="normal" title="ゴロゴロ">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -176,7 +182,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="080-0s-cbh">
-                                <rect key="frame" x="120" y="441" width="81" height="44"/>
+                                <rect key="frame" x="121" y="449" width="81" height="44"/>
                                 <state key="normal" title="ゲームする">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -185,7 +191,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKR-Dw-Sbt">
-                                <rect key="frame" x="230" y="449" width="81" height="49"/>
+                                <rect key="frame" x="230" y="448" width="81" height="49"/>
                                 <state key="normal" title="かたずける">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -193,24 +199,35 @@
                                     <action selector="kataduke" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pjZ-qp-tmU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsv-6J-eTi">
+                                <rect key="frame" x="230" y="530" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="bt1" destination="vXZ-lx-hvc" eventType="touchUpInside" id="F3J-t0-cAh"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="l_03.gif" translatesAutoresizingMaskIntoConstraints="NO" id="9mw-Y4-o4i">
-                                <rect key="frame" x="37" y="138" width="240" height="149"/>
+                                <rect key="frame" x="50" y="140" width="221" height="133"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.89636715587013649" green="1" blue="0.98271407648637343" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="boy" destination="9mw-Y4-o4i" id="m00-XV-DCG"/>
                         <outlet property="powerLabel" destination="fB2-CV-7JU" id="wH9-MP-uvJ"/>
                         <outlet property="shinraiLabel" destination="wZH-ar-HlJ" id="eVt-1v-3A5"/>
                         <outlet property="sportsLabel" destination="pbt-qB-M13" id="dCY-Yu-Yh5"/>
                         <outlet property="syusaiLabel" destination="ig5-rV-NQh" id="1EV-Z3-UVn"/>
                         <outlet property="yearLabel" destination="YRM-4F-sAV" id="5k9-he-pSa"/>
+                        <outletCollection property="boy" destination="9mw-Y4-o4i" id="a7Z-gb-A0W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="197" y="462"/>
+            <point key="canvasLocation" x="365" y="641"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fUQ-O1-hWf">
@@ -552,6 +569,6 @@
         <image name="旅.png" width="640" height="1136"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xfp-5l-6Bk"/>
+        <segue reference="ujV-rG-1eH"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -11,6 +11,14 @@ import AVFoundation
 
 class ViewController: UIViewController,AVAudioPlayerDelegate {
     
+    
+    //タイマー
+    var timer: NSTimer!
+    var cnt: Float = 0
+    
+    
+    
+    
     var ope = 1
     @IBOutlet var shinraiLabel:UILabel!
     var shinrai:Int = 10
@@ -34,16 +42,61 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
     var audioPlayer: AVAudioPlayer!
     
     
-    override func viewDidLoad() {
+    
+    @IBOutlet weak var boy: UIImageView!
+    
+    
+    
+    
+        override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    
+    //@IBAction func timerBtn(sender: UIButton) {
+        
+        //タイマーを作る.
+       /* timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "onUpdate:", userInfo: nil, repeats: true)
+        
+    }*/
+    
+    /*func onUpdate(timer : NSTimer){
+        cnt += 0.1
+        if cnt > 5.0 {
+            if timer.valid  {
+                //timerを停止する.
+                timer.invalidate()
+            }
+        }
+    }*/
+    
+    @IBAction func bt1(){
+        // アニメーションの時間を2秒に設定.
+        
+        UIView.animateWithDuration(2.0,
+            // 遅延時間.
+            delay: 0.0,
+            // バネの弾性力. 小さいほど弾性力は大きくなる.
+            usingSpringWithDamping: 0.4,
+            // 初速度.
+            initialSpringVelocity: 15,
+            // 一定の速度.
+            options: UIViewAnimationOptions.CurveLinear,
+            animations: { () -> Void in
+                self.boy.layer.position = CGPointMake(160,100
+                )
+                // アニメーション完了時の処理
+            }) { (Bool) -> Void in
+                self.boy.center = self.view.center
+        }
+    }
     @IBAction func book(){
         if ope <= 6 {
             syusai = syusai + 10
@@ -308,6 +361,7 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
         self.presentViewController(nex as UIViewController, animated: true, completion: nil)
     }
 
+    
     
     
     }
