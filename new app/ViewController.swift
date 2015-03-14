@@ -80,21 +80,22 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
     @IBAction func bt1(){
         // アニメーションの時間を2秒に設定.
         
-        UIView.animateWithDuration(2.0,
+        UIView.animateWithDuration(0.5,
             // 遅延時間.
             delay: 0.0,
             // バネの弾性力. 小さいほど弾性力は大きくなる.
-            usingSpringWithDamping: 0.4,
+            usingSpringWithDamping: 1,
             // 初速度.
             initialSpringVelocity: 15,
             // 一定の速度.
             options: UIViewAnimationOptions.CurveLinear,
             animations: { () -> Void in
-                self.boy.layer.position = CGPointMake(160,100
+                self.boy.layer.position = CGPointMake(160,80
                 )
                 // アニメーション完了時の処理
             }) { (Bool) -> Void in
-                self.boy.center = self.view.center
+                self.boy.layer.position = CGPointMake(160,200
+                )
         }
     }
     @IBAction func book(){
