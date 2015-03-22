@@ -161,27 +161,13 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
         ope = ope + 1
        
         //効果音をつける
-        let sound_data = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("勉強(#1)", ofType: "mp3")!)
+        let sound_data = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("勉強", ofType: "mp3")!)
             
             audioPlayer = AVAudioPlayer(contentsOfURL:sound_data, error: nil)
             audioPlayer.delegate = self 
             audioPlayer.prepareToPlay()
             audioPlayer.play()
             
-            /*
-            移動するアニメーション.
-            */
-            boy.layer.position = CGPointMake(-30, -30)
-            
-            // アニメーション処理
-            UIView.animateWithDuration(NSTimeInterval(CGFloat(3.0)),
-            animations: {() -> Void in
-            
-            // 移動先の座標を指定する.
-            self.boy.center = CGPoint(x: self.view.frame.width/2,y: self.view.frame.height/2);
-            
-            }, completion: {(Bool) -> Void in
-            })
             
             }
         if ope > 6{
@@ -521,15 +507,15 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
              self.boy.transform = CGAffineTransformMakeRotation(angle)
                 },
                 completion: { (Bool) -> Void in
+                
                     
             })
             
-            
-
         }
         if ope > 6{
             result()
         }
+        
     }
     
     

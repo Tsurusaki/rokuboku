@@ -26,6 +26,7 @@
 		B870E50A1AB064A6001B8345 /* new-app-イラスト病気.png in Resources */ = {isa = PBXBuildFile; fileRef = B870E5051AB064A6001B8345 /* new-app-イラスト病気.png */; };
 		B89B07161AB3C0EF001F91F0 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B89B07151AB3C0EF001F91F0 /* AVFoundation.framework */; };
 		B89D4B721ABE6C50005BF147 /* jump01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B89D4B711ABE6C50005BF147 /* jump01.mp3 */; };
+		B89D4B741ABE88FB005BF147 /* 勉強.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B89D4B731ABE88FB005BF147 /* 勉強.mp3 */; };
 		B8B150101AB123D00051C0B3 /* 旅.png in Resources */ = {isa = PBXBuildFile; fileRef = B8B1500F1AB123D00051C0B3 /* 旅.png */; };
 		B8D0EFC91AB2C78800EAEA10 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D0EFC81AB2C78800EAEA10 /* iAd.framework */; };
 		B8D620171AAA910D0034E457 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D620161AAA910D0034E457 /* AppDelegate.swift */; };
@@ -36,7 +37,6 @@
 		B8D620301AAA910D0034E457 /* new_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D6202F1AAA910D0034E457 /* new_appTests.swift */; };
 		B8D6203E1AAA9A290034E457 /* room_kodomobeya.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D6203D1AAA9A290034E457 /* room_kodomobeya.png */; };
 		B8D620401AAA9ABD0034E457 /* l_03.gif in Resources */ = {isa = PBXBuildFile; fileRef = B8D6203F1AAA9ABD0034E457 /* l_03.gif */; };
-		B8F0DE811AB164B400C31F29 /* 勉強 (#1).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8F0DE801AB164B400C31F29 /* 勉強 (#1).mp3 */; };
 		B8F0DE831AB1651F00C31F29 /* 本.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8F0DE821AB1651F00C31F29 /* 本.mp3 */; };
 		B8F0DE851AB1656E00C31F29 /* サッカー.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8F0DE841AB1656E00C31F29 /* サッカー.mp3 */; };
 		B8F0DE871AB168D800C31F29 /* お菓子.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B8F0DE861AB168D800C31F29 /* お菓子.mp3 */; };
@@ -77,6 +77,7 @@
 		B870E5051AB064A6001B8345 /* new-app-イラスト病気.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new-app-イラスト病気.png"; sourceTree = "<group>"; };
 		B89B07151AB3C0EF001F91F0 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B89D4B711ABE6C50005BF147 /* jump01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jump01.mp3; sourceTree = "<group>"; };
+		B89D4B731ABE88FB005BF147 /* 勉強.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "勉強.mp3"; sourceTree = "<group>"; };
 		B8B1500F1AB123D00051C0B3 /* 旅.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "旅.png"; sourceTree = "<group>"; };
 		B8D0EFC81AB2C78800EAEA10 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		B8D620111AAA910D0034E457 /* new app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "new app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,7 +92,6 @@
 		B8D6202F1AAA910D0034E457 /* new_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = new_appTests.swift; sourceTree = "<group>"; };
 		B8D6203D1AAA9A290034E457 /* room_kodomobeya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = room_kodomobeya.png; sourceTree = "<group>"; };
 		B8D6203F1AAA9ABD0034E457 /* l_03.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = l_03.gif; sourceTree = "<group>"; };
-		B8F0DE801AB164B400C31F29 /* 勉強 (#1).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "勉強 (#1).mp3"; sourceTree = "<group>"; };
 		B8F0DE821AB1651F00C31F29 /* 本.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "本.mp3"; sourceTree = "<group>"; };
 		B8F0DE841AB1656E00C31F29 /* サッカー.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "サッカー.mp3"; sourceTree = "<group>"; };
 		B8F0DE861AB168D800C31F29 /* お菓子.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "お菓子.mp3"; sourceTree = "<group>"; };
@@ -162,6 +162,7 @@
 		B8D620131AAA910D0034E457 /* new app */ = {
 			isa = PBXGroup;
 			children = (
+				B89D4B731ABE88FB005BF147 /* 勉強.mp3 */,
 				B89D4B711ABE6C50005BF147 /* jump01.mp3 */,
 				B8F0DE901AB169AA00C31F29 /* ごろごろ.mp3 */,
 				B8F0DE8E1AB1698900C31F29 /* ゲーム.mp3 */,
@@ -171,7 +172,6 @@
 				B8F0DE861AB168D800C31F29 /* お菓子.mp3 */,
 				B8F0DE841AB1656E00C31F29 /* サッカー.mp3 */,
 				B8F0DE821AB1651F00C31F29 /* 本.mp3 */,
-				B8F0DE801AB164B400C31F29 /* 勉強 (#1).mp3 */,
 				B8B1500F1AB123D00051C0B3 /* 旅.png */,
 				B870E5011AB064A6001B8345 /* new-app-イラストいけめん.png */,
 				B870E5021AB064A6001B8345 /* new-app-イラストぐれる.png */,
@@ -302,6 +302,7 @@
 				B870E5071AB064A6001B8345 /* new-app-イラストぐれる.png in Resources */,
 				B83A91E81AAAC55900119D6F /* btn057_06.png in Resources */,
 				B83A91EA1AAAC55900119D6F /* btn057_08.png in Resources */,
+				B89D4B741ABE88FB005BF147 /* 勉強.mp3 in Resources */,
 				B83A91D71AAAC46800119D6F /* 165810_01.jpg in Resources */,
 				B89D4B721ABE6C50005BF147 /* jump01.mp3 in Resources */,
 				B8F0DE891AB1691A00C31F29 /* お手伝い.mp3 in Resources */,
@@ -322,7 +323,6 @@
 				B83A91E71AAAC55900119D6F /* btn057_05.png in Resources */,
 				B8F0DE8B1AB1694000C31F29 /* 喧嘩.mp3 in Resources */,
 				B870E50A1AB064A6001B8345 /* new-app-イラスト病気.png in Resources */,
-				B8F0DE811AB164B400C31F29 /* 勉強 (#1).mp3 in Resources */,
 				B8F0DE851AB1656E00C31F29 /* サッカー.mp3 in Resources */,
 				B870E5091AB064A6001B8345 /* new-app-イラストできすぎ.png in Resources */,
 				B83A91E61AAAC55900119D6F /* btn057_04.png in Resources */,
