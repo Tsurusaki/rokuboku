@@ -124,6 +124,22 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
             audioPlayer.delegate = self
             audioPlayer.prepareToPlay()
             audioPlayer.play()
+            
+            /*
+            移動するアニメーション.
+            */
+            self.boy.layer.position = CGPointMake(160, 200)
+            
+            // アニメーション処理
+            UIView.animateWithDuration(NSTimeInterval(CGFloat(3.0)),
+                animations: {() -> Void in
+                    
+            // 移動先の座標を指定する.
+             self.boy.layer.position = CGPointMake(30, 200)
+                    
+                }, completion: {(Bool) -> Void in
+            })
+        
         }
         if ope > 6{
             result()
@@ -145,12 +161,28 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
         ope = ope + 1
        
         //効果音をつける
-        let sound_data = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("勉強", ofType: "mp3")!)
+        let sound_data = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("勉強(#1)", ofType: "mp3")!)
             
             audioPlayer = AVAudioPlayer(contentsOfURL:sound_data, error: nil)
             audioPlayer.delegate = self 
             audioPlayer.prepareToPlay()
             audioPlayer.play()
+            
+            /*
+            移動するアニメーション.
+            */
+            boy.layer.position = CGPointMake(-30, -30)
+            
+            // アニメーション処理
+            UIView.animateWithDuration(NSTimeInterval(CGFloat(3.0)),
+            animations: {() -> Void in
+            
+            // 移動先の座標を指定する.
+            self.boy.center = CGPoint(x: self.view.frame.width/2,y: self.view.frame.height/2);
+            
+            }, completion: {(Bool) -> Void in
+            })
+            
             }
         if ope > 6{
             result()
@@ -185,9 +217,10 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
             // アニメーション処理
             UIView.animateWithDuration(NSTimeInterval(CGFloat(3.4)),
                 animations: {() -> Void in
+             
                     
              // 移動先の座標を指定する.
-             self.boy.layer.position = CGPointMake(-400, 200)
+             self.boy.layer.position = CGPointMake(-2000, 200)
                     
             //self.boy.center = CGPoint(x: self.view.frame.width/100,y: self.view.frame.height/200);
                     
@@ -216,6 +249,30 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
             audioPlayer.delegate = self
             audioPlayer.prepareToPlay()
             audioPlayer.play()
+            
+            /*
+            拡縮アニメーション.
+            */
+            
+            self.boy.transform = CGAffineTransformMakeScale(1, 1)
+            
+            // アニメーションの時間を3秒に設定.
+            UIView.animateWithDuration(3.0,
+            
+            animations: { () -> Void in
+            // 縮小用アフィン行列を作成.
+            self.boy.transform = CGAffineTransformMakeScale(1.3, 1.0)
+            }) // 連続したアニメーション処理.
+            { (Bool) -> Void in
+                UIView.animateWithDuration(3.0,
+                    // アニメーション中の処理.
+                    animations: { () -> Void in
+                        
+                    }) // アニメーション完了時の処理.
+                    { (Bool) -> Void in
+                    
+                }
+            }
         }
         if ope > 6{
             result()
@@ -236,6 +293,34 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
             audioPlayer.delegate = self
             audioPlayer.prepareToPlay()
             audioPlayer.play()
+            
+            /*
+            バネのような動きをするアニメーション.
+            */
+            
+            // アニメーションの時間を2秒に設定.
+            UIView.animateWithDuration(2.0,
+            
+            // 遅延時間.
+            delay: 0.0,
+            
+            // バネの弾性力. 小さいほど弾性力は大きくなる.
+            usingSpringWithDamping: 0.1,
+            
+            // 初速度.
+            initialSpringVelocity: 2.5,
+            
+            // 一定の速度.
+            options: UIViewAnimationOptions.CurveLinear,
+            
+            animations: { () -> Void in
+            
+            self.boy.layer.position = CGPointMake(100, 10)
+            
+            // アニメーション完了時の処理
+            }) { (Bool) -> Void in
+                 self.boy.layer.position = CGPointMake(150, 200)            }
+            
             
                     }
         if ope > 6{
@@ -259,6 +344,30 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
             audioPlayer.delegate = self
             audioPlayer.prepareToPlay()
             audioPlayer.play()
+            /*
+            拡縮アニメーション.
+            */
+            self.boy.transform = CGAffineTransformMakeScale(1, 1)
+            
+            // アニメーションの時間を0.4秒に設定.
+            UIView.animateWithDuration(0.4,
+            
+            animations: { () -> Void in
+            
+            // 拡大用アフィン行列を作成.
+            self.boy.transform = CGAffineTransformMakeScale(0.5, 0.5)
+            }) // 連続したアニメーション処理.
+            { (Bool) -> Void in
+                UIView.animateWithDuration(3.0,
+                    // アニメーション中の処理.
+                    animations: { () -> Void in
+                        
+                    }) // アニメーション完了時の処理.
+                    { (Bool) -> Void in
+                        // 大きさを元に戻す.
+                        self.boy.transform = CGAffineTransformMakeScale(1, 1)
+                }
+            }
         }
         if ope > 6{
             result()
@@ -323,6 +432,52 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
             audioPlayer.delegate = self
             audioPlayer.prepareToPlay()
             audioPlayer.play()
+            
+            /*
+            X, Y方向にそれぞれ反転するアニメーション.
+            */
+            // アニメーションの時間を2秒に設定
+            UIView.animateWithDuration(0.7,
+            
+            // アニメーション中の処理
+            animations: { () -> Void in
+            
+            // X方向に反転用のアフィン行列作成
+            self.boy.transform = CGAffineTransformScale(self.boy.transform, -1.0, 1.0)
+            
+            // 連続したアニメーション処理.
+            }) { (Bool) -> Void in
+                UIView.animateWithDuration(3.0,
+                    
+                    // アニメーション中の処理
+                    animations: { () -> Void in
+                        
+                        // アニメーション完了時の処理
+                    }) { (Bool) -> Void in
+                }
+            }
+            
+           /* // アニメーションの時間を2秒に設定.
+            
+            UIView.animateWithDuration(0.5,
+                // 遅延時間.
+                delay: 0.0,
+                // バネの弾性力. 小さいほど弾性力は大きくなる.
+                usingSpringWithDamping: 1,
+                // 初速度.
+                initialSpringVelocity: 15,
+                // 一定の速度.
+                options: UIViewAnimationOptions.CurveLinear,
+                animations: { () -> Void in
+                    self.boy.layer.position = CGPointMake(160,80
+                    )
+                    // アニメーション完了時の処理
+                }) { (Bool) -> Void in
+                    self.boy.layer.position = CGPointMake(160,200
+                    )
+            }*/
+            
+
         }
         if ope > 6{
             result()
