@@ -12,9 +12,7 @@ import AVFoundation
 class ViewController: UIViewController,AVAudioPlayerDelegate {
     
     
-    //タイマー
-    var timer: NSTimer!
-    var cnt: Float = 0
+    
     
     
     
@@ -44,6 +42,9 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
     
     
     @IBOutlet weak var boy: UIImageView!
+    
+    var flag : Bool = false
+    
     
     
     
@@ -78,6 +79,15 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
     }*/
     
     @IBAction func bt1(){
+        //効果音をつける
+        let sound_data = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("jump01", ofType: "mp3")!)
+        
+        audioPlayer = AVAudioPlayer(contentsOfURL:sound_data, error: nil)
+        audioPlayer.delegate = self
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+
+        
         // アニメーションの時間を2秒に設定.
         
         UIView.animateWithDuration(0.5,
@@ -166,7 +176,27 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
             audioPlayer.delegate = self
             audioPlayer.prepareToPlay()
             audioPlayer.play()
+            
+            /*
+            移動するアニメーション.
+            */
+            self.boy.layer.position = CGPointMake(160, 200)
+            
+            // アニメーション処理
+            UIView.animateWithDuration(NSTimeInterval(CGFloat(3.4)),
+                animations: {() -> Void in
+                    
+             // 移動先の座標を指定する.
+             self.boy.layer.position = CGPointMake(-400, 200)
+                    
+            //self.boy.center = CGPoint(x: self.view.frame.width/100,y: self.view.frame.height/200);
+                    
+                }, completion: {(Bool) -> Void in
+            })
+            
+
         }
+        
         if ope > 6{
             result()
         }
@@ -206,7 +236,8 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
             audioPlayer.delegate = self
             audioPlayer.prepareToPlay()
             audioPlayer.play()
-        }
+            
+                    }
         if ope > 6{
             result()
         }
@@ -251,6 +282,25 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
             audioPlayer.delegate = self
             audioPlayer.prepareToPlay()
             audioPlayer.play()
+            
+            /*
+            移動するアニメーション.
+            */
+            self.boy.layer.position = CGPointMake(160, 200)
+            
+            // アニメーション処理
+            UIView.animateWithDuration(NSTimeInterval(CGFloat(2.4)),
+            animations: {() -> Void in
+            
+            // 移動先の座標を指定する.
+                self.boy.layer.position = CGPointMake(10, 200)
+
+            //self.boy.center = CGPoint(x: self.view.frame.width/100,y: self.view.frame.height/200);
+            
+            }, completion: {(Bool) -> Void in
+            })
+            
+           
         }
         if ope > 6{
             result()
@@ -295,6 +345,32 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
             audioPlayer.delegate = self
             audioPlayer.prepareToPlay()
             audioPlayer.play()
+            
+            /*
+            回転アニメーション.
+            */
+            // 初期化.
+            self.boy.transform = CGAffineTransformMakeRotation(0)
+            
+            // radianで回転角度を指定(90度).
+            let angle:CGFloat = CGFloat(M_PI_2)
+            
+            // アニメーションの秒数を設定(2秒).
+            UIView.animateWithDuration(2.0,
+                
+                animations: { () -> Void in
+                
+            
+                
+            // 回転用のアフィン行列を生成.
+             self.boy.transform = CGAffineTransformMakeRotation(angle)
+                },
+                completion: { (Bool) -> Void in
+                    
+            })
+            
+            
+
         }
         if ope > 6{
             result()
@@ -374,6 +450,8 @@ class ViewController: UIViewController,AVAudioPlayerDelegate {
     
         
 //    }
+    
+    
     
 }
 

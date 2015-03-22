@@ -25,9 +25,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="room_kodomobeya.png" translatesAutoresizingMaskIntoConstraints="NO" id="rw8-XV-6iM">
                                 <rect key="frame" x="10" y="40" width="301" height="252"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="l_03.gif" translatesAutoresizingMaskIntoConstraints="NO" id="9mw-Y4-o4i">
-                                <rect key="frame" x="50" y="140" width="221" height="133"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="btn057_04.png" translatesAutoresizingMaskIntoConstraints="NO" id="lkA-BG-Ec2">
                                 <rect key="frame" x="13" y="375" width="89" height="53"/>
                             </imageView>
@@ -115,12 +112,6 @@
                                     <action selector="fight" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QZF-Oy-gCK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRM-4F-sAV">
-                                <rect key="frame" x="199" y="213" width="85" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="信頼" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMU-pI-bI9">
                                 <rect key="frame" x="23" y="20" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -179,7 +170,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="歳" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuX-Nj-K8e">
-                                <rect key="frame" x="285" y="231" width="17" height="21"/>
+                                <rect key="frame" x="285" y="252" width="17" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -212,6 +203,15 @@
                                     <action selector="bt1" destination="vXZ-lx-hvc" eventType="touchUpInside" id="F3J-t0-cAh"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRM-4F-sAV">
+                                <rect key="frame" x="225" y="234" width="85" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="l_03.gif" translatesAutoresizingMaskIntoConstraints="NO" id="9mw-Y4-o4i">
+                                <rect key="frame" x="42" y="159" width="221" height="133"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.89636715587013649" green="1" blue="0.98271407648637343" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
